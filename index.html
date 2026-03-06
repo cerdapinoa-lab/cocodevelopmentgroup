@@ -31,35 +31,69 @@
   </a>
 
   <ul class="navbar-menu">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#properties">Properties</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#team">Team</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#properties">Projects</a></li>
+    <li><a href="#portfolio">Social Fund</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#blog">Blog</a></li>
   </ul>
 
-  <div class="navbar-cta">
-    <a href="#booking" class="btn-nav">Book a Call</a>
+  <div class="navbar-right">
+
+    <!-- Currency selector -->
+    <div class="nav-select-wrap">
+      <button class="nav-select-btn" aria-label="Currency">
+        <span class="nav-select-icon">&#x20AC;</span>
+        <span>EUR</span>
+        <svg class="nav-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l5 5 5-5"/></svg>
+      </button>
+      <ul class="nav-dropdown">
+        <li class="active">&#x20AC; EUR</li>
+        <li>$ USD</li>
+        <li>Rp IDR</li>
+      </ul>
+    </div>
+
+    <!-- Language selector -->
+    <div class="nav-select-wrap">
+      <button class="nav-select-btn" aria-label="Language">
+        <span>&#x1F1EB;&#x1F1F7;</span>
+        <span>FR</span>
+        <svg class="nav-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l5 5 5-5"/></svg>
+      </button>
+      <ul class="nav-dropdown">
+        <li class="active">&#x1F1EB;&#x1F1F7; Français</li>
+        <li>&#x1F1EC;&#x1F1E7; English</li>
+        <li>&#x1F1EE;&#x1F1F9; Italiano</li>
+        <li>&#x1F1EA;&#x1F1F8; Español</li>
+        <li>&#x1F1F3;&#x1F1F1; Nederlands</li>
+        <li>&#x1F1F7;&#x1F1FA; Русский</li>
+        <li>&#x1F1E9;&#x1F1EA; Deutsch</li>
+      </ul>
+    </div>
+
+    <!-- WhatsApp button -->
+    <a href="https://wa.me/YOURPHONENUMBER" target="_blank" rel="noopener" class="btn-whatsapp-nav" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+
   </div>
 
   <button class="hamburger" aria-label="Open menu">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
   </button>
 </nav>
 
 <!-- Mobile Menu Overlay -->
 <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
   <button class="mobile-menu-close" aria-label="Close menu">&#x2715;</button>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#properties">Properties</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="#team">Team</a>
-  <a href="#booking">Book a Call</a>
-  <a href="#contact">Contact</a>
+  <a href="#hero">Home</a>
+  <a href="#properties">Projects</a>
+  <a href="#portfolio">Social Fund</a>
+  <a href="#about">About Us</a>
+  <a href="#blog">Blog</a>
+  <a href="https://wa.me/YOURPHONENUMBER" target="_blank" rel="noopener" style="color:#25d366">WhatsApp</a>
 </div>
 
 
@@ -67,14 +101,11 @@
      HERO
 ===================================================== -->
 <section class="hero" id="hero">
-  <!-- YouTube background video — autoplay, muted, looped, no controls -->
+  <!-- Local hero video -->
   <div class="hero-video-wrapper" aria-hidden="true">
-    <iframe
-      src="https://www.youtube.com/embed/NX4h8esbnpw?autoplay=1&mute=1&loop=1&playlist=NX4h8esbnpw&controls=0&disablekb=1&iv_load_policy=3&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&vq=hd1080"
-      title="COCO Development Group — Bali Real Estate"
-      allow="autoplay; fullscreen"
-      allowfullscreen
-    ></iframe>
+    <video autoplay muted loop playsinline id="hero-video">
+      <source src="video/hero.mp4" type="video/mp4">
+    </video>
   </div>
   <!-- Poster fallback on mobile -->
   <div class="hero-video-poster" role="img" aria-label="Luxury Bali villa"></div>
@@ -116,26 +147,247 @@
 <!-- =====================================================
      STATS BAR
 ===================================================== -->
-<section class="stats-bar" aria-label="Key statistics">
+<section class="stats-bar" aria-label="Key figures">
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item">
-        <span class="stat-number" data-target="200" data-suffix="+">200+</span>
-        <span class="stat-label">Properties Sold</span>
+        <span class="stat-number">72 000 €</span>
+        <span class="stat-label">Minimum Investment</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number" data-target="10" data-suffix="+">10+</span>
-        <span class="stat-label">Years Experience</span>
+        <span class="stat-number">12–17%</span>
+        <span class="stat-label">Average Investment Return</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number" data-target="50" data-suffix="+">50+</span>
-        <span class="stat-label">Expert Team Members</span>
+        <span class="stat-number">+400</span>
+        <span class="stat-label">Properties Under Management</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number" data-target="30" data-suffix="+">30+</span>
-        <span class="stat-label">Nationalities Served</span>
+        <span class="stat-number" data-target="9" data-suffix="">9</span>
+        <span class="stat-label">Developments in Bali</span>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     WHAT WE DO
+===================================================== -->
+<section class="wwd" id="what-we-do">
+  <div class="container">
+
+    <div class="wwd-header fade-in text-center">
+      <span class="section-label">Our Approach</span>
+      <h2 class="section-title">What We Do</h2>
+    </div>
+
+    <div class="wwd-grid">
+
+      <!-- Build -->
+      <div class="wwd-card fade-in">
+        <div class="wwd-top">
+          <div class="wwd-stat-block">
+            <span class="wwd-number" data-target="11" data-suffix="">11</span>
+            <span class="wwd-stat-label">Properties in Operation</span>
+          </div>
+          <div class="wwd-step">01</div>
+        </div>
+        <div class="wwd-sep"></div>
+        <div class="wwd-body">
+          <div class="wwd-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Build</h3>
+          <p>We design and construct villas and hotel complexes on behalf of our clients.</p>
+        </div>
+      </div>
+
+      <!-- Manage -->
+      <div class="wwd-card wwd-card--accent fade-in">
+        <div class="wwd-top">
+          <div class="wwd-stat-block">
+            <span class="wwd-number">10<span style="font-size:1.8rem">+</span></span>
+            <span class="wwd-stat-label">Years in Real Estate</span>
+          </div>
+          <div class="wwd-step">02</div>
+        </div>
+        <div class="wwd-sep"></div>
+        <div class="wwd-body">
+          <div class="wwd-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
+          </div>
+          <h3>Manage</h3>
+          <p>We handle all property management fully in-house, end to end.</p>
+        </div>
+      </div>
+
+      <!-- Pay -->
+      <div class="wwd-card fade-in">
+        <div class="wwd-top">
+          <div class="wwd-stat-block">
+            <span class="wwd-number">8<span style="font-size:1.8rem">-15%</span></span>
+            <span class="wwd-stat-label">Average Return</span>
+          </div>
+          <div class="wwd-step">03</div>
+        </div>
+        <div class="wwd-sep"></div>
+        <div class="wwd-body">
+          <div class="wwd-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <h3>Pay</h3>
+          <p>We pay your rental income quarterly, directly to your bank account.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Presentation video -->
+    <div class="wwd-video-section fade-in">
+      <div class="wwd-video-label">
+        <span class="section-label">Presentation Video</span>
+        <p>Discover our approach and projects in detail</p>
+      </div>
+      <div class="wwd-video-frame">
+        <video controls preload="metadata" class="wwd-video" poster="">
+          <source src="video/presentation.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+        <div class="wwd-video-deco wwd-video-deco--tl"></div>
+        <div class="wwd-video-deco wwd-video-deco--br"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =====================================================
+     INVEST IN BALI REAL ESTATE
+===================================================== -->
+<section class="invest" id="invest">
+  <div class="container">
+
+    <div class="invest-header fade-in">
+      <h2 class="section-title">Invest in Bali Real Estate</h2>
+      <div class="invest-subrow">
+        <span class="section-label">Our Projects</span>
+        <div class="invest-arrows">
+          <button class="invest-arrow invest-arrow--prev" aria-label="Previous">&#8592;</button>
+          <button class="invest-arrow invest-arrow--next" aria-label="Next">&#8594;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="invest-track-wrap">
+      <div class="invest-track">
+
+        <!-- Card 1 -->
+        <div class="invest-card fade-in">
+          <div class="invest-img-wrap">
+            <img src="images/01.webp" alt="Résidence Coco Lifestyle" loading="lazy">
+            <span class="invest-badge">Book Your Stay</span>
+          </div>
+          <div class="invest-body">
+            <span class="invest-category">EXCLUSIVE LIFESTYLE PROPERTIES</span>
+            <h3 class="invest-name">RÉSIDENCE COCO LIFESTYLE</h3>
+            <div class="invest-roi-row">
+              <div class="invest-roi-left">
+                <span class="invest-roi">ROI 15 – 17%</span>
+                <span class="invest-roi-label">Estimated annual return on investment</span>
+              </div>
+              <a href="#properties" class="invest-details">View details ›</a>
+            </div>
+            <ul class="invest-features">
+              <li>Seseh, Badung, Bali</li>
+              <li>14 apartments</li>
+              <li>Recovery area</li>
+              <li>Coworking spaces</li>
+              <li>Spacious terrace and pool</li>
+            </ul>
+            <div class="invest-footer">
+              <div class="invest-price-wrap">
+                <span class="invest-price-label">STARTING FROM:</span>
+                <span class="invest-price">123 326,70 €</span>
+                <span class="invest-tax">ⓘ Taxes included</span>
+              </div>
+              <a href="#booking" class="btn btn-primary invest-btn">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="invest-card fade-in">
+          <div class="invest-img-wrap">
+            <img src="images/02.webp" alt="Le Manoir Coco" loading="lazy">
+            <span class="invest-badge">Book Your Stay</span>
+          </div>
+          <div class="invest-body">
+            <span class="invest-category">EXCLUSIVE LIFESTYLE PROPERTIES</span>
+            <h3 class="invest-name">LE MANOIR COCO</h3>
+            <div class="invest-roi-row">
+              <div class="invest-roi-left">
+                <span class="invest-roi">ROI 13 – 15%</span>
+                <span class="invest-roi-label">Estimated annual return on investment</span>
+              </div>
+              <a href="#properties" class="invest-details">View details ›</a>
+            </div>
+            <ul class="invest-features">
+              <li>Seseh, Badung, Bali</li>
+              <li>3 bedrooms</li>
+              <li>315 m²</li>
+              <li>Spacious rooftop terrace</li>
+              <li>Ready in June 2024</li>
+            </ul>
+            <div class="invest-footer">
+              <div class="invest-price-wrap">
+                <span class="invest-price-label">STARTING FROM:</span>
+                <span class="invest-price">421 441,59 €</span>
+                <span class="invest-tax">ⓘ Taxes included</span>
+              </div>
+              <a href="#booking" class="btn btn-primary invest-btn">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="invest-card fade-in">
+          <div class="invest-img-wrap">
+            <img src="images/03.webp" alt="Azoria Living Suluban Beach Resort" loading="lazy">
+            <span class="invest-badge">Receive 20% of rental profits</span>
+          </div>
+          <div class="invest-body">
+            <span class="invest-category">BALI'S PREMIER PADEL & WELLNESS COMPLEX</span>
+            <h3 class="invest-name">AZORIA LIVING SULUBAN BEACH RESORT</h3>
+            <div class="invest-roi-row">
+              <div class="invest-roi-left">
+                <span class="invest-roi">ROI 12 – 17%</span>
+                <span class="invest-roi-label">Estimated annual return on investment</span>
+              </div>
+              <a href="#properties" class="invest-details">View details ›</a>
+            </div>
+            <ul class="invest-features">
+              <li>1 minute from Suluban Beach</li>
+              <li>285 properties</li>
+              <li>6 padel courts, café and lounge</li>
+              <li>Gym, Pilates, CrossFit, Yoga, Boxing</li>
+              <li>Sauna, hammam, cold plunge, pool</li>
+            </ul>
+            <div class="invest-footer">
+              <div class="invest-price-wrap">
+                <span class="invest-price-label">STARTING FROM:</span>
+                <span class="invest-price">90 000 €</span>
+                <span class="invest-tax">ⓘ Taxes included</span>
+              </div>
+              <a href="#booking" class="btn btn-primary invest-btn">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.invest-track -->
+    </div><!-- /.invest-track-wrap -->
+
   </div>
 </section>
 
@@ -150,8 +402,8 @@
       <!-- Image column -->
       <div class="about-image fade-in">
         <img
-          src="https://picsum.photos/seed/cocoabout2025/800/700"
-          alt="Luxury Bali villa with tropical garden"
+          src="images/rasmus.jpg"
+          alt="Rasmus Holst — Founder, COCO Development Group"
           loading="lazy"
         >
         <div class="about-badge">
@@ -180,10 +432,10 @@
   </div>
 </section>
 
-
+<-- -->
 <!-- =====================================================
      WHY INVEST IN BALI
-===================================================== -->
+===================================================== 
 <section class="why-bali" id="why-bali">
   <div class="container">
 
@@ -212,12 +464,12 @@
     </div>
 
   </div>
-</section>
+</section>-->
 
 
 <!-- =====================================================
      SERVICES
-===================================================== -->
+===================================================== 
 <section class="services" id="services">
   <div class="container">
 
@@ -262,12 +514,12 @@
     </div>
 
   </div>
-</section>
+</section>-->
 
 
 <!-- =====================================================
      FEATURED PROPERTIES
-===================================================== -->
+===================================================== 
 <section class="properties" id="properties">
   <div class="container">
 
@@ -279,9 +531,9 @@
       <a href="https://cocodevelopmentgroup.com/property-investment-projects-bali/" target="_blank" rel="noopener" class="btn btn-primary">View All Projects</a>
     </div>
 
-    <div class="properties-grid">
+    <div class="properties-grid">-->
 
-      <!-- Project 1 — Coco Hills Resort -->
+      <!-- Project 1 — Coco Hills Resort 
       <article class="property-card fade-in">
         <div class="property-image">
           <img src="https://picsum.photos/seed/cocohills2025/600/420" alt="Coco Hills Resort Bali" loading="lazy">
@@ -301,9 +553,9 @@
           </div>
           <a href="https://cocodevelopmentgroup.com/coco-hills-resort-bali/" target="_blank" rel="noopener" class="property-cta">View Project &rarr;</a>
         </div>
-      </article>
+      </article>-->
 
-      <!-- Project 2 — The Coco Boulevard -->
+      <!-- Project 2 — The Coco Boulevard 
       <article class="property-card fade-in">
         <div class="property-image">
           <img src="https://picsum.photos/seed/cocoboulevard2025/600/420" alt="The Coco Boulevard — Bali" loading="lazy">
@@ -323,9 +575,9 @@
           </div>
           <a href="https://cocodevelopmentgroup.com/boulevard-villa-bali/" target="_blank" rel="noopener" class="property-cta">View Project &rarr;</a>
         </div>
-      </article>
+      </article>-->
 
-      <!-- Project 3 — Amazona Jungle Resort -->
+      <!-- Project 3 — Amazona Jungle Resort 
       <article class="property-card fade-in">
         <div class="property-image">
           <img src="https://picsum.photos/seed/amazonajungle2025/600/420" alt="Amazona Jungle Resort Bali" loading="lazy">
@@ -345,9 +597,9 @@
           </div>
           <a href="https://cocodevelopmentgroup.com/amazona-jungle-resort-bali/" target="_blank" rel="noopener" class="property-cta">View Project &rarr;</a>
         </div>
-      </article>
+      </article>-->
 
-      <!-- Project 4 — Azoria Living Nyang Nyang -->
+      <!-- Project 4 — Azoria Living Nyang Nyang 
       <article class="property-card fade-in">
         <div class="property-image">
           <img src="https://picsum.photos/seed/azorianyangnyang/600/420" alt="Azoria Living — Nyang Nyang Beach Resort" loading="lazy">
@@ -367,9 +619,9 @@
           </div>
           <a href="https://cocodevelopmentgroup.com/azoria-living-nyang-nyang-beach-resort/" target="_blank" rel="noopener" class="property-cta">View Project &rarr;</a>
         </div>
-      </article>
+      </article>-->
 
-      <!-- Project 5 — Azoria Living Suluban -->
+      <!-- Project 5 — Azoria Living Suluban 
       <article class="property-card fade-in">
         <div class="property-image">
           <img src="https://picsum.photos/seed/azoriasuluban/600/420" alt="Azoria Living — Suluban Beach Resort" loading="lazy">
@@ -389,9 +641,9 @@
           </div>
           <a href="https://cocodevelopmentgroup.com/azoria-living-suluban-beach-resort/" target="_blank" rel="noopener" class="property-cta">View Project &rarr;</a>
         </div>
-      </article>
+      </article>-->
 
-      <!-- Project 6 — Bali Luxury Mansion -->
+      <!-- Project 6 — Bali Luxury Mansion 
       <article class="property-card fade-in">
         <div class="property-image">
           <img src="https://picsum.photos/seed/baliluxmansion/600/420" alt="Bali Luxury Mansion" loading="lazy">
@@ -415,12 +667,12 @@
 
     </div>
   </div>
-</section>
+</section>-->
 
 
 <!-- =====================================================
      PORTFOLIO / BRANDS
-===================================================== -->
+===================================================== 
 <section class="portfolio" id="portfolio">
   <div class="container">
 
@@ -452,11 +704,11 @@
 
   </div>
 </section>
-
+-->
 
 <!-- =====================================================
      TEAM
-===================================================== -->
+===================================================== 
 <section class="team" id="team">
   <div class="container">
 
@@ -539,7 +791,7 @@
     </div>
   </div>
 </section>
-
+-->
 
 <!-- =====================================================
      BOOK A MEETING — TIDYCAL

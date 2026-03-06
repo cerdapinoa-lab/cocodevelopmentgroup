@@ -217,6 +217,47 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------
+     INVEST CAROUSEL (prev / next arrows)
+  -------------------------------------------------- */
+  const investTrack = document.querySelector('.invest-track');
+  const prevBtn     = document.querySelector('.invest-arrow--prev');
+  const nextBtn     = document.querySelector('.invest-arrow--next');
+
+  if (investTrack && prevBtn && nextBtn) {
+    let currentIndex = 0;
+
+    function getVisibleCount() {
+      if (window.innerWidth <= 600) return 1;
+      if (window.innerWidth <= 900) return 2;
+      return 3;
+    }
+
+    function getTotalCards() {
+      return investTrack.querySelectorAll('.invest-card').length;
+    }
+
+    function updateCarousel() {
+      const visible = getVisibleCount();
+      const total   = getTotalCards();
+      const maxIndex = Math.max(0, total - visible);
+      currentIndex = Math.min(Math.max(currentIndex, 0), maxIndex);
+
+      const cardWidth = investTrack.querySelector('.invest-card').offsetWidth;
+      const gap = 24;
+      const offset = currentIndex * (cardWidth + gap);
+      investTrack.style.transform = `translateX(-${offset}px)`;
+
+      prevBtn.style.opacity = currentIndex === 0 ? '0.35' : '1';
+      nextBtn.style.opacity = currentIndex >= maxIndex ? '0.35' : '1';
+    }
+
+    prevBtn.addEventListener('click', () => { currentIndex--; updateCarousel(); });
+    nextBtn.addEventListener('click', () => { currentIndex++; updateCarousel(); });
+    window.addEventListener('resize', () => { currentIndex = 0; updateCarousel(); });
+    updateCarousel();
+  }
+
+  /* --------------------------------------------------
      HOVER TILT EFFECT for cards
   -------------------------------------------------- */
   const tiltCards = document.querySelectorAll('.property-card, .team-card, .why-card');
