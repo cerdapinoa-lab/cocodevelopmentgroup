@@ -5,6 +5,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* --------------------------------------------------
+     SCROLL PROGRESS BAR
+  -------------------------------------------------- */
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.appendChild(progressBar);
+
+  window.addEventListener('scroll', () => {
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / scrollHeight) * 100;
+    progressBar.style.width = scrolled + '%';
+  }, { passive: true });
+
+  /* --------------------------------------------------
      NAVBAR — scroll behavior
   -------------------------------------------------- */
   const navbar = document.getElementById('navbar');
@@ -41,8 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
   mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 
   /* --------------------------------------------------
-     HERO — no static bg anymore, YouTube handles it
+     PARALLAX SCROLL EFFECT
   -------------------------------------------------- */
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const parallaxElements = document.querySelectorAll('.hero-content');
+    parallaxElements.forEach(el => {
+      const speed = 0.5;
+      el.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+  }, { passive: true });
 
   /* --------------------------------------------------
      COUNTER ANIMATION
@@ -163,5 +184,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   window.addEventListener('scroll', highlightNav, { passive: true });
+
+  /* --------------------------------------------------
+     CURSOR TRAIL EFFECT (subtle)
+  -------------------------------------------------- */
+  const cursorTrail = [];
+  const trailLength = 5;
+
+  document.addEventListener('mousemove', (e) => {
+    if (window.innerWidth < 768) return;
+
+    const trail = document.createElement('div');
+    trail.className = 'cursor-trail';
+    trail.style.left = e.clientX + 'px';
+    trail.style.top = e.clientY + 'px';
+    document.body.appendChild(trail);
+
+    cursorTrail.push(trail);
+
+    if (cursorTrail.length > trailLength) {
+      const oldTrail = cursorTrail.shift();
+      if (oldTrail && oldTrail.parentNode) {
+        oldTrail.parentNode.removeChild(oldTrail);
+      }
+    }
+
+    setTimeout(() => {
+      if (trail && trail.parentNode) {
+        trail.parentNode.removeChild(trail);
+      }
+    }, 500);
+  });
+
+  /* --------------------------------------------------
+     HOVER TILT EFFECT for cards
+  -------------------------------------------------- */
+  const tiltCards = document.querySelectorAll('.property-card, .team-card, .why-card');
+
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * 3;
+      const rotateY = ((centerX - x) / centerX) * 3;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.02)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
 
 });
