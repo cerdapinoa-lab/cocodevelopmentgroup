@@ -1,0 +1,21 @@
+{
+  "name": "coco-development-group",
+  "version": "1.0.0",
+  "description": "COCO Development Group - Bali Real Estate Investment",
+  "scripts": {
+    "dev": "npx vite",
+    "build": "echo 'Static site - no build required' && exit 0",
+    "preview": "npx vite preview"
+  },
+  "keywords": [
+    "bali",
+    "real-estate",
+    "investment",
+    "luxury-villas"
+  ],
+  "author": "COCO Development Group",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
